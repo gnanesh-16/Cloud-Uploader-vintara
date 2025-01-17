@@ -12,6 +12,11 @@ CloudUploader is a command-line interface (CLI) tool designed to simplify upload
 - Progress bar for file uploads.
 - Logging of upload activities.
 - Error handling and validation for file existence.
+- File compression before upload.
+- Multi-part upload for large files.
+- Upload speed calculation.
+- Colored output for errors and success messages.
+- Detailed logging system.
 
 ## Installation
 
@@ -45,3 +50,23 @@ To upload multiple files to AWS S3, use the following command:
 ```bash
 ./clouduploader.sh /path/to/file1 /path/to/file2 ...
 ```
+
+## New Features
+
+### File Compression
+Files are compressed before upload to save bandwidth and storage space.
+
+### Multi-part Upload
+Files larger than 50MB are uploaded using multi-part upload for better performance and reliability.
+
+### Upload Speed Calculation
+The script calculates and displays the upload speed for each file.
+
+### Colored Output
+Errors and success messages are displayed in colored text for better readability.
+
+### Detailed Logging
+All upload activities, including errors and success messages, are logged in `upload.log`.
+
+### Bucket Region Selection
+Users can specify the region for new buckets during creation.
